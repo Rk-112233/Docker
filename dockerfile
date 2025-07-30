@@ -28,10 +28,11 @@ CMD ["./main"]
 
 
 
-🔄 CMD vs ENTRYPOINT:
-Feature        	      CMD	                                            ENTRYPOINT
-Overridable?	      Yes (can override at docker run)	                Not easily overridden
-Use case	          Default arguments	                                Mandatory startup script or binary
+🔹 CMD — Command
+    CMD sets default arguments for the container’s main process. These defaults can be overridden when running the container using docker run.
+
+🔹 ENTRYPOINT — Entry Point
+    ENTRYPOINT sets the main command that will always be executed when the container starts. This command is not overridden by arguments passed to docker run (unless you explicitly use --entrypoint).
 
 📌 Tips:
 Use .dockerignore to exclude unnecessary files from the image.
