@@ -1,39 +1,39 @@
 ✅ 2. Docker Containers
 📘 Definition:
-A Docker container is a running instance of a Docker image. It’s an isolated environment that runs your application with all its dependencies bundled inside.
+        A Docker container is a running instance of a Docker image. It’s an isolated environment that runs your application with all its dependencies bundled inside.
 
 🧱 Key Properties:
-Property	Description
-Lightweight	Shares OS kernel, unlike virtual machines.
-Isolated	Has its own process space, network, and filesystem.
-Ephemeral	By default, data is lost when the container stops (unless volumes are used).
-Portable	Runs consistently on any environment with Docker.
+        1.Property	Description
+        2.Lightweight	Shares OS kernel, unlike virtual machines.
+        3.Isolated	Has its own process space, network, and filesystem.
+        4.Ephemeral	By default, data is lost when the container stops (unless volumes are used).
+        5.Portable	Runs consistently on any environment with Docker.
 
 ⚙️ Lifecycle of a Container:
-Create
-Start
-Running
-Stop
-Remove
+        Create
+        Start
+        Running
+        Stop
+        Remove
 
 🧪 Common Docker Container Commands:
 
-  docker run helloimage                  # Run a container from your image
-  docker run -d helloimage               # Run in background (detached)
-  docker ps                              # List running containers
-  docker ps -a                           # List all containers (including stopped)
-  docker stop <container_id>             # Stop a running container
-  docker rm <container_id>               # Remove a stopped container
-  docker exec -it <container_id> bash    # Access shell inside a running container
+        docker run helloimage                  # Run a container from your image
+        docker run -d helloimage               # Run in background (detached)
+        docker ps                              # List running containers
+        docker ps -a                           # List all containers (including stopped)
+        docker stop <container_id>             # Stop a running container
+        docker rm <container_id>               # Remove a stopped container
+        docker exec -it <container_id> bash    # Access shell inside a running container
 
   
   
 📦 Example:
-  docker run -it --name testhello helloimage
-  -it: Interactive terminal
-  --name: Assigns a name to the container
-  helloimage: Image to run
+        docker run -it --name testhello helloimage
+        -it: Interactive terminal
+        --name: Assigns a name to the container
+        helloimage: Image to run
 
 📌 Real-World Analogy:
-  Image = Class (blueprint)
-  Container = Object (instance of the class)
+        Image = Class (blueprint)
+        Container = Object (instance of the class)
