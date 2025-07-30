@@ -1,0 +1,52 @@
+✅ 4. Docker Volumes
+
+  
+📘 Definition:
+    A Docker Volume is a persistent storage mechanism used to store data outside of the container's filesystem so that data is not lost when the container stops or is removed.
+
+🔹 Why Volumes Are Important:
+      Containers are ephemeral by default (data gets wiped on restart).
+      Volumes ensure data persistence.
+      Useful for:
+          Databases (MySQL, PostgreSQL)
+          Logs
+          Config files
+
+🧱 Volume Types:
+
+      Type	          Description
+      Named	            Managed by Docker. Created using a name (myvolume).
+      Anonymous	        Created automatically without a name.
+      Host bind mount  	Direct path from host (less portable).
+
+🧪 Volume Commands:
+        
+        docker volume create myvol                 # Create a named volume
+        docker volume ls                           # List all volumes
+        docker volume inspect myvol                # Inspect details
+        docker volume rm myvol                     # Remove a volume
+
+          
+⚙️ Using Volumes in docker run:
+
+    docker run -v myvol:/data ubuntu           # Attach named volume to /data
+    docker run -v $(pwd):/app ubuntu           # Bind mount current dir to /app
+
+      
+      
+📌 Format:
+
+        -v <volume-name>:<container-path>
+
+🧠 Best Practices:
+    Prefer named volumes over bind mounts for portability.
+    Use volumes to persist:
+    DB data (/var/lib/mysql)
+    Application logs
+    Uploaded files in web apps
+
+✅ Example:
+If you run:
+    docker run -v myvol:/app/data helloimage
+    Any file written inside /app/data will be stored in myvol, and won't be lost if the container is deleted.
+
