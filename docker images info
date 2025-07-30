@@ -1,0 +1,29 @@
+✅ 1. Docker Image
+📘 Definition:
+A Docker Image is a read-only template that contains the application code, libraries, environment variables, and all dependencies required to run a container.
+
+📌 Key Points:
+Immutable: Cannot be changed once created.
+
+Built using a Dockerfile: A script containing instructions.
+
+Stored in layers: Each command in the Dockerfile adds a new layer.
+
+Used to create containers.
+
+🧪 Example:
+If you write a Dockerfile like this:
+dockerfile
+  
+FROM ubuntu
+RUN apt-get install -y nginx
+Then run:
+docker build -t mynginx:1.0 .
+You get an image mynginx:1.0.
+
+🛠️ Common Commands:
+
+docker images              # List all images
+docker build -t app:1.0 .  # Build image from Dockerfile
+docker rmi image_id        # Remove an image
+docker pull nginx          # Download image from Docker Hub
