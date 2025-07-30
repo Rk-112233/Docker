@@ -3,11 +3,11 @@
         A Docker container is a running instance of a Docker image. It’s an isolated environment that runs your application with all its dependencies bundled inside.
 
 🧱 Key Properties:
-        1.Property	Description
-        2.Lightweight	Shares OS kernel, unlike virtual machines.
-        3.Isolated	Has its own process space, network, and filesystem.
-        4.Ephemeral	By default, data is lost when the container stops (unless volumes are used).
-        5.Portable	Runs consistently on any environment with Docker.
+          Property	Description
+        1.Lightweight	Shares OS kernel, unlike virtual machines.
+        2.Isolated	Has its own process space, network, and filesystem.
+        3.Ephemeral	By default, data is lost when the container stops (unless volumes are used).
+        4.Portable	Runs consistently on any environment with Docker.
 
 ⚙️ Lifecycle of a Container:
         Create
