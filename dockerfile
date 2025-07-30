@@ -35,9 +35,7 @@ CMD ["./main"]
     ENTRYPOINT sets the main command that will always be executed when the container starts. This command is not overridden by arguments passed to docker run (unless you explicitly use --entrypoint).
 
 📌 Tips:
-Use .dockerignore to exclude unnecessary files from the image.
-
-Use multi-stage builds to reduce image size.
-
-Keep Dockerfiles simple and readable.
+    1.Use .dockerignore to exclude unnecessary files from the image.
+    2.Use multi-stage builds to reduce image size.
+    3.Keep Dockerfiles simple and readable.
 
