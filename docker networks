@@ -18,19 +18,20 @@
           custom bridge	            User-defined bridge, allows container name-based DNS resolution.
 
 🧪 Common Commands:
+          
+          docker network ls                            # List all networks
+          docker network create mynet                  # Create a custom bridge network
+          docker network inspect mynet                 # View details
+          docker network rm mynet                      # Delete network
 
-docker network ls                            # List all networks
-docker network create mynet                  # Create a custom bridge network
-docker network inspect mynet                 # View details
-docker network rm mynet                      # Delete network
+
 🛠️ Attaching a Container to a Network:
 
-docker run --network=mynet --name myapp helloimage
-Containers on the same custom network can reach each other by name:
+    docker run --network=mynet --name myapp helloimage
+    Containers on the same custom network can reach each other by name.
+    myapp can ping db (if there’s another container named db) using:
+      ping db
 
-myapp can ping db (if there’s another container named db) using:
-ping db
 🔄 Default vs Custom Bridge:
-Default bridge does not support name-based DNS (must use IP).
-
-Custom bridge does support name resolution (use container names).
+    1.Default bridge does not support name-based DNS (must use IP).
+    2.Custom bridge does support name resolution (use container names).
