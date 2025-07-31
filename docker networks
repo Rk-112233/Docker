@@ -1,0 +1,36 @@
+✅ 5. Docker Networks
+
+  
+📘 Definition:
+    A Docker Network allows communication between containers, and optionally between containers and the host machine. It defines how containers find and talk to each other.
+
+🔹 Why Use Docker Networks?
+    To enable isolated communication between services (e.g., web ↔ database).
+    Avoid exposing internal services to the outside world.
+    Allow scaling and load-balancing in Docker Compose or Swarm.
+
+🔗 Types of Docker Networks:
+          Type	                    Description
+          bridge (default)	        Creates an internal private network on the host. Most common for single-host communication.
+          host	                    Container shares the host’s network namespace. No isolation.
+          none	                    No network interface at all.
+          overlay (Swarm only)	    For multi-host communication.
+          custom bridge	            User-defined bridge, allows container name-based DNS resolution.
+
+🧪 Common Commands:
+
+docker network ls                            # List all networks
+docker network create mynet                  # Create a custom bridge network
+docker network inspect mynet                 # View details
+docker network rm mynet                      # Delete network
+🛠️ Attaching a Container to a Network:
+
+docker run --network=mynet --name myapp helloimage
+Containers on the same custom network can reach each other by name:
+
+myapp can ping db (if there’s another container named db) using:
+ping db
+🔄 Default vs Custom Bridge:
+Default bridge does not support name-based DNS (must use IP).
+
+Custom bridge does support name resolution (use container names).
