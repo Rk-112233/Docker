@@ -1,0 +1,52 @@
+✅ 7. Docker Compose
+📘 Definition:
+    Docker Compose is a tool used to define and manage multi-container Docker applications using a simple YAML file.
+    Instead of running multiple docker run commands manually, Compose lets you define everything — services, networks, and volumes — in a single file (docker-compose.yml) and bring it up with one command.
+
+📦 Key Features:
+    1.Define multiple services (e.g., app + db).
+    2.Networks and volumes managed automatically.
+    3.Simplifies multi-container deployment.
+    4.Great for local development, testing, and CI.
+
+📄 Example docker-compose.yml:
+yaml
+Copy
+Edit
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+  db:
+    image: postgres
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+volumes:
+  dbdata:
+🔹 Key Sections:
+Section	Description
+services    	        Define each container.
+image                	Use existing image (e.g., nginx, postgres).
+build                	Build image from Dockerfile.
+ports	                Host ↔ container port mappings.
+volumes	              Define and attach volumes.
+networks	            Connect services.
+
+🧪 Common Commands:
+
+    docker-compose up           # Start all services
+    docker-compose up -d        # Start in background (detached)
+    docker-compose down         # Stop and remove services, networks, etc.
+    docker-compose build        # Rebuild services from Dockerfile
+    docker-compose logs         # View logs
+    docker-compose ps           # List running services
+
+
+📌 Benefits of Docker Compose:
+
+      1.Declarative setup for dev/test environments.
+      2.Easier orchestration of app + db + cache + other services.
+      3.Cleaner and faster than managing multiple docker run commands.
