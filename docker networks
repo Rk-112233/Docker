@@ -2,7 +2,8 @@
 
   
 📘 Definition:
-    A Docker Network allows communication between containers, and optionally between containers and the host machine. It defines how containers find and talk to each other.
+    A Docker Network allows communication between containers, and optionally between containers and the host machine. 
+    It defines how containers find and talk to each other.
 
 🔹 Why Use Docker Networks?
     To enable isolated communication between services (e.g., web ↔ database).
