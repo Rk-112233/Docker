@@ -23,7 +23,12 @@ You get an image mynginx:1.0.
 
 🛠️ Common Commands:
 
-docker images              # List all images
-docker build -t app:1.0 .  # Build image from Dockerfile
-docker rmi image_id        # Remove an image
-docker pull nginx          # Download image from Docker Hub
+| Action                      | Command                          |
+| --------------------------- | -------------------------------- |
+| List images                 | `docker images`                  |
+| Search image                | `docker search <image>`          |
+| Pull image from Docker Hub  | `docker pull <image>:<tag>`      |
+| Build image from Dockerfile | `docker build -t <name>:<tag> .` |
+| Remove image                | `docker rmi <image>`             |
+| Remove unused images        | `docker image prune`             |
+
