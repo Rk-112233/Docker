@@ -32,3 +32,8 @@ You get an image mynginx:1.0.
 | Remove image                | `docker rmi <image>`             |
 | Remove unused images        | `docker image prune`             |
 
+
+NOTE : docker tag isolated-image:latest isolated-image:v1
+will not create new image instead it create a tag for underlying image. i.e, it will not create image it just create tag and reference it.
+
+
