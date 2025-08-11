@@ -10,6 +10,8 @@
     Avoid exposing internal services to the outside world.
     Allow scaling and load-balancing in Docker Compose or Swarm.
 
+🧪 Common Commands:
+
 | **Type**                 | **Description**                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------------- |
 | **bridge (default)**     | Creates an internal private network on the host. Most common for single-host communication. |
@@ -18,9 +20,17 @@
 | **overlay (Swarm only)** | Enables multi-host communication across a Docker Swarm cluster.                             |
 | **custom bridge**        | User-defined bridge network allowing container name-based DNS resolution.                   |
 
+| Action                            | Command                                           |
+| --------------------------------- | ------------------------------------------------- |
+| List networks                     | `docker network ls`                               |
+| Create network                    | `docker network create <name>`                    |
+| Connect container to network      | `docker network connect <network> <container>`    |
+| Disconnect container from network | `docker network disconnect <network> <container>` |
+| Remove network                    | `docker network rm <name>`                        |
 
-🧪 Common Commands:
-          
+
+EXAMPLE:
+
           docker network ls                            # List all networks
           docker network create mynet                  # Create a custom bridge network
           docker network inspect mynet                 # View details
