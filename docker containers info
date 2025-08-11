@@ -20,14 +20,19 @@
 
 🧪 Common Docker Container Commands:
 
-        docker run helloimage                  # Run a container from your image
-        docker run -d helloimage               # Run in background (detached)
-        docker ps                              # List running containers
-        docker ps -a                           # List all containers (including stopped)
-        docker stop <container_id>             # Stop a running container
-        docker rm <container_id>               # Remove a stopped container
-        docker exec -it <container_id> bash    # Access shell inside a running container
-
+| Action                        | Command                            |
+| ----------------------------- | ---------------------------------- |
+| List running containers       | `docker ps`                        |
+| List all containers           | `docker ps -a`                     |
+| Create & run container        | `docker run <image>`               |
+| Run with name                 | `docker run --name <name> <image>` |
+| Run in background             | `docker run -d <image>`            |
+| Run interactively             | `docker run -it <image> /bin/bash` |
+| Stop container                | `docker stop <container>`          |
+| Start container               | `docker start <container>`         |
+| Restart container             | `docker restart <container>`       |
+| Remove container              | `docker rm <container>`            |
+| Remove all stopped containers | `docker container prune`           |
   
   
 📦 Example:
