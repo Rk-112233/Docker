@@ -41,8 +41,8 @@ EXAMPLE:
           
 ⚙️ Using Volumes in docker run:
 
-    docker run -v myvol:/data ubuntu           # Attach named volume to /data
-    docker run -v $(pwd):/app ubuntu           # Bind mount current dir to /app
+    docker run -v myvol:/data ubuntu               # Attach named volume to /data
+    docker run -v $(pwd):/app ubuntu               # Bind mount current dir to /app
 
       
       
