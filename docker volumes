@@ -20,11 +20,6 @@
       Host bind mount  	Direct path from host (less portable).
 
 🧪 Volume Commands:
-        
-        docker volume create myvol                 # Create a named volume
-        docker volume ls                           # List all volumes
-        docker volume inspect myvol                # Inspect details
-        docker volume rm myvol                     # Remove a volume
 
 | Action                    | Command                                             |
 | ------------------------- | --------------------------------------------------- |
@@ -34,6 +29,13 @@
 | Remove unused volumes     | `docker volume prune`                               |
 | Mount volume in container | `docker run -v <volume>:/path/in/container <image>` |
 | Bind mount local dir      | `docker run -v $(pwd):/app <image>`                 |
+
+EXAMPLE:
+        
+        docker volume create myvol                 # Create a named volume
+        docker volume ls                           # List all volumes
+        docker volume inspect myvol                # Inspect details
+        docker volume rm myvol                     # Remove a volume
 
 
           
