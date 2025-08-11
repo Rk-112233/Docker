@@ -26,6 +26,16 @@
         docker volume inspect myvol                # Inspect details
         docker volume rm myvol                     # Remove a volume
 
+| Action                    | Command                                             |
+| ------------------------- | --------------------------------------------------- |
+| List volumes              | `docker volume ls`                                  |
+| Create volume             | `docker volume create <name>`                       |
+| Remove volume             | `docker volume rm <name>`                           |
+| Remove unused volumes     | `docker volume prune`                               |
+| Mount volume in container | `docker run -v <volume>:/path/in/container <image>` |
+| Bind mount local dir      | `docker run -v $(pwd):/app <image>`                 |
+
+
           
 ⚙️ Using Volumes in docker run:
 
