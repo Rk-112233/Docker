@@ -33,6 +33,14 @@
 | Restart container             | `docker restart <container>`       |
 | Remove container              | `docker rm <container>`            |
 | Remove all stopped containers | `docker container prune`           |
+
+
+| Action                           | Command                                 |
+| -------------------------------- | --------------------------------------- |
+| View logs                        | `docker logs <container>`               |
+| Tail logs                        | `docker logs -f <container>`            |
+| Execute command inside container | `docker exec -it <container> <command>` |
+
   
   
 📦 Example:
