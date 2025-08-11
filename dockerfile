@@ -6,15 +6,16 @@
     Each instruction creates a layer in the image.
 
 🧱 Key Instructions in a Dockerfile:
-        Instruction	      Description
-        FROM	          Specifies base image (e.g., ubuntu, golang, alpine).
-        WORKDIR	        Sets the working directory inside the container.
-        COPY	          Copies files/folders from the host into the container.
-        RUN	            Executes shell commands at build time (e.g., install packages).
-        CMD	            Defines the default command to run when the container starts.
-        EXPOSE	        Documents which port the container listens on (doesn’t publish it).
-        ENV	            Sets environment variables.
-        ENTRYPOINT	    Similar to CMD, but more strict (used for wrapper scripts).
+| **Instruction** | **Description**                                                      |
+| --------------- | -------------------------------------------------------------------- |
+| **FROM**        | Specifies the base image (e.g., `ubuntu`, `golang`, `alpine`).       |
+| **WORKDIR**     | Sets the working directory inside the container.                     |
+| **COPY**        | Copies files/folders from the host into the container.               |
+| **RUN**         | Executes shell commands at build time (e.g., install packages).      |
+| **CMD**         | Defines the default command to run when the container starts.        |
+| **EXPOSE**      | Documents which port the container listens on (does not publish it). |
+| **ENV**         | Sets environment variables.                                          |
+| **ENTRYPOINT**  | Similar to CMD, but more strict (often used for wrapper scripts).    |
 
 📄 Example Dockerfile (Go App):
 dockerfile
