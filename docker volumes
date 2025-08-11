@@ -14,10 +14,12 @@
 
 🧱 Volume Types:
 
-      Type	          Description
-      Named	            Managed by Docker. Created using a name (myvolume).
-      Anonymous	        Created automatically without a name.
-      Host bind mount  	Direct path from host (less portable).
+| Type            | Description                                                 |
+| --------------- | ----------------------------------------------------------- |
+| Named           | Managed by Docker. Created using a name (e.g., `myvolume`). |
+| Anonymous       | Created automatically without a name.                       |
+| Host bind mount | Direct path from host filesystem (less portable).           |
+
 
 🧪 Volume Commands:
 
