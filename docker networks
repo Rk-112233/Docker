@@ -10,13 +10,14 @@
     Avoid exposing internal services to the outside world.
     Allow scaling and load-balancing in Docker Compose or Swarm.
 
-🔗 Types of Docker Networks:
-          Type	                    Description
-          bridge (default)	        Creates an internal private network on the host. Most common for single-host communication.
-          host	                    Container shares the host’s network namespace. No isolation.
-          none	                    No network interface at all.
-          overlay (Swarm only)	    For multi-host communication.
-          custom bridge	            User-defined bridge, allows container name-based DNS resolution.
+| **Type**                 | **Description**                                                                             |
+| ------------------------ | ------------------------------------------------------------------------------------------- |
+| **bridge (default)**     | Creates an internal private network on the host. Most common for single-host communication. |
+| **host**                 | Container shares the host’s network namespace. No isolation.                                |
+| **none**                 | No network interface at all.                                                                |
+| **overlay (Swarm only)** | Enables multi-host communication across a Docker Swarm cluster.                             |
+| **custom bridge**        | User-defined bridge network allowing container name-based DNS resolution.                   |
+
 
 🧪 Common Commands:
           
