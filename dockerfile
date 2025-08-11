@@ -6,7 +6,7 @@
     Each instruction creates a layer in the image.
 
 🧱 Key Instructions in a Dockerfile:
-| **Instruction** | **Description**                                                      |
+| Instruction | Description                                                      |
 | ----------- | -------------------------------------------------------------------- |
 | FROM        | Specifies the base image (e.g., `ubuntu`, `golang`, `alpine`).       |
 | WORKDIR     | Sets the working directory inside the container.                     |
