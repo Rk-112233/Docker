@@ -10,9 +10,7 @@
     4.Great for local development, testing, and CI.
 
 📄 Example docker-compose.yml:
-yaml
-Copy
-Edit
+
 version: '3'
 services:
   web:
